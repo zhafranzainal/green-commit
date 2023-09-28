@@ -1,21 +1,21 @@
 #!/bin/bash
 
 # Define an array of messages
-arr[0]="bot: 🐞 Fixed a bug that was so sneaky"
-arr[1]="bot: 🥶 Implemented cool feature"
-arr[2]="bot: 🧹 Cleaned up the codebase"
-arr[3]="bot: 🧈 Merged code so smoothly, it's practically buttery"
-arr[4]="bot: 🐆 Optimized performance to rival a cheetah"
-arr[5]="bot: 🌱 Code so fresh, it's practically minty"
-arr[6]="bot: 📄 Updated documentation because reading is fundamental"
-arr[7]="bot: 🔧 Fixed the thing, again"
-arr[8]="bot: ✨ Made it work, magically"
+messages[0]="🐞 Fixed a sneaky bug"
+messages[1]="🥶 Implemented cool feature"
+messages[2]="🧹 Cleaned up codebase"
+messages[3]="🧈 Merged code buttery smooth"
+messages[4]="🐆 Performance optimized like cheetah"
+messages[5]="🌱 Code's minty fresh"
+messages[6]="📄 Updated docs as reading matters"
+messages[7]="🔧 Fixed the thing, again"
+messages[8]="✨ Made it work, magically"
 
 # Generate a random number to select a message from the array
-rand=$(($RANDOM % ${#arr[@]}))
+randomNum=$(($RANDOM % ${#messages[@]}))
 
 # Get the current date and time
-d=$(date '+%Y-%m-%dT%H:%M:%SZ')
+currentTimestamp=$(date '+%B %d, %Y %I:%M %p')
 
 # Check if update.md exists, and create it if it doesn't
 if [ ! -e "update.md" ]; then
@@ -24,7 +24,7 @@ if [ ! -e "update.md" ]; then
 fi
 
 # Append text to update.md, indicating the last update time
-echo "## 🤔 LAST UPDATED AT: ${d}" >update.md
+echo "## 🤔 LAST UPDATED AT: ${currentTimestamp}" >update.md
 
 # Configure local Git user information
 git config --local user.email "zhafranzainal11@gmail.com"
@@ -34,4 +34,4 @@ git config --local user.name "Zhafran Zainal"
 # git commit -am: commit all modified files and provide a commit message in a single command
 # a (all): Automatically add all modified files in the working directory
 # m (message): Specify the commit message that describes the purpose of the commit
-git commit -am "${arr[$rand]} at ${d}"
+git commit -am "${messages[$randomNum]} at ${currentTimestamp}"
