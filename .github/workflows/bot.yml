@@ -28,9 +28,6 @@ jobs:
           persist-credentials: false
           # Fetch only the latest commit
           fetch-depth: 1
-
-      - name: Find task.sh
-        run: find . -name "task.sh"
       
       # Runs a shell script named "task.sh"
       - name: Run Bot Task
