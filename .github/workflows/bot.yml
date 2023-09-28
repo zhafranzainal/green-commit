@@ -48,6 +48,8 @@ jobs:
         with:
           # Token for the repo. Use the GitHub token provided by secrets
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Destination branch to push changes, default is master
+          branch: main
           # Force push changes
           force: true
           # Directory to change to before pushing. Specify as current directory
