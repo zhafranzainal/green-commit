@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # Define an array of messages
-arr[0]="bot: 👋 Hello Github!"
-arr[1]="bot: 🥳 Yeayyy!"
-arr[2]="bot: 😬 Working from github."
-arr[3]="bot: 👨‍💻 Work, work, work!"
-arr[4]="bot: 😪 Hufft..."
-arr[5]="bot: 😎 I'm working for my master!"
-arr[6]="bot: 🙄 Running task, again."
-arr[7]="bot: 👻 Thanks master."
-arr[7]="bot: 🤔 Update?."
+arr[0]="bot: 🐞 Fixed a bug that was so sneaky"
+arr[1]="bot: 🥶 Implemented cool feature"
+arr[2]="bot: 🧹 Cleaned up the codebase"
+arr[3]="bot: 🧈 Merged code so smoothly, it's practically buttery"
+arr[4]="bot: 🐆 Optimized performance to rival a cheetah"
+arr[5]="bot: 🌱 Code so fresh, it's practically minty"
+arr[6]="bot: 📄 Updated documentation because reading is fundamental"
+arr[7]="bot: 🔧 Fixed the thing, again"
+arr[8]="bot: ✨ Made it work, magically"
 
 # Generate a random number to select a message from the array
 rand=$(($RANDOM % ${#arr[@]}))
@@ -21,7 +21,6 @@ d=$(date '+%Y-%m-%dT%H:%M:%SZ')
 if [ ! -e "update.md" ]; then
     touch update.md
     git add update.md
-    git commit -m "Add update.md file"
 fi
 
 # Append text to update.md, indicating the last update time
@@ -35,4 +34,4 @@ git config --local user.name "Zhafran Zainal"
 # git commit -am: commit all modified files and provide a commit message in a single command
 # a (all): Automatically add all modified files in the working directory
 # m (message): Specify the commit message that describes the purpose of the commit
-git commit -am "${arr[$rand]} (at ${d})"
+git commit -am "${arr[$rand]} at ${d}"
