@@ -15,7 +15,7 @@ messages[8]="✨ Made it work, magically"
 randomNum=$(($RANDOM % ${#messages[@]}))
 
 # Get the current date and time
-currentTimestamp=$(TZ='Asia/Kuala_Lumpur' date '+%B %d, %Y %I:%M %p')
+currentTimestamp=$(TZ='Asia/Kuala_Lumpur' date '+%B %d, %Y at %I:%M %p')
 
 # Check if update.md exists, and create it if it doesn't
 if [ ! -e "update.md" ]; then
@@ -34,4 +34,4 @@ git config --local user.name "Zhafran Zainal"
 # git commit -am: commit all modified files and provide a commit message in a single command
 # a (all): Automatically add all modified files in the working directory
 # m (message): Specify the commit message that describes the purpose of the commit
-git commit -am "${messages[$randomNum]} at ${currentTimestamp}"
+git commit -am "${messages[$randomNum]} on ${currentTimestamp}"
