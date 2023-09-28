@@ -15,7 +15,7 @@ messages[8]="✨ Made it work, magically"
 randomNum=$(($RANDOM % ${#messages[@]}))
 
 # Get the current date and time
-currentTimestamp=$(date '+%B %d, %Y %I:%M %p')
+currentTimestamp=$(TZ='Asia/Kuala_Lumpur' date '+%B %d, %Y %I:%M %p')
 
 # Check if update.md exists, and create it if it doesn't
 if [ ! -e "update.md" ]; then
