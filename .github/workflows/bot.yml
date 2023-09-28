@@ -14,6 +14,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+
   # This workflow contains a single job called "auto-commit"
   auto-commit:
     # The type of runner that the job will run on
@@ -21,6 +22,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
         with:
@@ -46,7 +48,7 @@ jobs:
           # Token for the repo. Use the GitHub token provided by secrets
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # Destination branch to push changes, default is master
-          branch: main
+          branch: ${{ github.ref }}
           # Force push changes
           force: true
           # Directory to change to before pushing. Specify as current directory

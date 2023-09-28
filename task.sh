@@ -24,7 +24,7 @@ if [ ! -e "update.md" ]; then
 fi
 
 # Append text to update.md, indicating the last update time
-echo "## 🤔 LAST UPDATED AT: ${currentTimestamp}" >update.md
+echo "## 🤔 LAST UPDATED ON: ${currentTimestamp}" >update.md
 
 # Configure local Git user information
 git config --local user.email "zhafranzainal11@gmail.com"
