@@ -20,6 +20,8 @@ d=$(date '+%Y-%m-%dT%H:%M:%SZ')
 # Check if update.md exists, and create it if it doesn't
 if [ ! -e "update.md" ]; then
     touch update.md
+    git add update.md
+    git commit -m "Add update.md file"
 fi
 
 # Append text to update.md, indicating the last update time
