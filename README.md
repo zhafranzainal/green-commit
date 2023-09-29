@@ -8,7 +8,7 @@ The `task.sh` script generates random commit messages and updates an `update.md`
 
 2. It generates a random number to select a message from the array.
 
-3. It gets the current date and time in the 'Asia/Kuala_Lumpur' timezone (you can change this timezone to your preference).
+3. It gets the current date and time.
 
 4. If the `update.md` file doesn't exist, it creates it and stages it for commit.
 
@@ -20,7 +20,10 @@ The `task.sh` script generates random commit messages and updates an `update.md`
 
 ## Customize
 
+- Replace the [Git user information](https://github.com/zhafranzainal/green-commit/blob/main/task.sh#L29) with your own.
 - Change the [cron schedule](https://github.com/zhafranzainal/green-commit/blob/main/.github/workflows/bot.yml#L13) for the automation of daily commits. (Refer: [https://crontab.guru/](https://crontab.guru/))
 - Modify the [messages array](https://github.com/zhafranzainal/green-commit/blob/main/task.sh#L3) to include your own commit messages.
-- Replace the [Git user information](https://github.com/zhafranzainal/green-commit/blob/main/task.sh#L29) with your own.
-- Change the [timezone](https://github.com/zhafranzainal/green-commit/blob/main/task.sh#L18).
+
+## Notes
+
+- GitHub Actions runs on Coordinated Universal Time (UTC) time, so commit timestamps will be in UTC, affecting your GitHub contribution graph based on UTC time instead of your local time zone.
