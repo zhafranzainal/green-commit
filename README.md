@@ -18,6 +18,15 @@ The `task.sh` script generates random commit messages and updates an `update.md`
 
 7. Finally, it commits the changes to the repository with a random commit message and the current timestamp.
 
+## Configure the default `GITHUB_TOKEN` permissions
+
+By default, `GITHUB_TOKEN` only has read access for the contents and packages scopes (the restricted setting).
+
+1. Under your repository name, click **Settings**.
+2. In the left sidebar, click  **Actions**, then click **General**.
+3. Under "Workflow permissions", enable `read and write access for all scopes` (the permissive setting).
+4. Click **Save** to apply the settings.
+
 ## Customize
 
 - Replace the [Git user information](https://github.com/zhafranzainal/green-commit/blob/main/task.sh#L29) with your own.
