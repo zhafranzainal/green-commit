@@ -20,11 +20,11 @@ The `task.sh` script generates random commit messages and updates an `update.md`
 
 ## Configure the default `GITHUB_TOKEN` permissions
 
-By default, `GITHUB_TOKEN` only has read access for the contents and packages scopes (the restricted setting).
+By default, `GITHUB_TOKEN` only has `Read repository contents and packages permissions` (the restricted setting).
 
 1. Under your repository name, click **Settings**.
 2. In the left sidebar, click  **Actions**, then click **General**.
-3. Under "Workflow permissions", enable `read and write access for all scopes` (the permissive setting).
+3. Under "Workflow permissions", enable `Read and write permissions` (the permissive setting).
 4. Click **Save** to apply the settings.
 
 ## Customize
